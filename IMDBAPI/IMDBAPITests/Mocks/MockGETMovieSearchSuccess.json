@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "title": "Terminator",
+        "overview": "desc",
+        "posterPath": "/some/path.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Terminator 2",
+        "overview": "desc 2",
+        "posterPath": "/some/path/2.jpg"
+    }
+]
