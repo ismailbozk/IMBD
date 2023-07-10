@@ -8,9 +8,6 @@
       location = "group:IMDBFoundation/IMDBFoundation.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:IMDBSearch/IMDBSearch.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:IMDBAPI/IMDBAPI.xcodeproj">
    </FileRef>
 </Workspace>

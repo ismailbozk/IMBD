@@ -6,9 +6,14 @@
 //
 
 import SwiftUI
+import IMDBAPI
 
 @main
 struct IMDBBaseApp: App {
+    init() {
+        IMDBAPIManager.configure(environment: .development, apiKey: Current.app.apiKey())
+    }
+
     var body: some Scene {
         WindowGroup {
             ContentView()

@@ -6,11 +6,10 @@
 //
 
 import SwiftUI
-import IMDBMovieSearch
 
 struct ContentView: View {
     var body: some View {
-        IMDBMovieSearch.ContentView()
+        Text("Hello")
     }
 }
 
