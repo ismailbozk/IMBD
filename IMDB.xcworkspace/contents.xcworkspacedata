@@ -5,6 +5,9 @@
       location = "group:IMDBMovieSearch/../IMDBBase/IMDBBase.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:MovieSearch/MovieSearch.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:IMDBFoundation/IMDBFoundation.xcodeproj">
    </FileRef>
    <FileRef
