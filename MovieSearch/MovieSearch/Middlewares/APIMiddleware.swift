@@ -8,12 +8,6 @@
 import Foundation
 import IMDBAPI
 
-protocol Middleware {
-    func appMiddleware(store: Store,
-                       action: AppAction,
-                       next: @escaping (AppAction) -> Void)
-}
-
 final class ApiMiddleware {
     static func appMiddleware(store: Store,
                               action: AppAction,

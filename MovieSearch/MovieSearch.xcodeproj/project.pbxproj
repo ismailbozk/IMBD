@@ -22,6 +22,7 @@
 		6D0605BD2A5C3DAB00B81D38 /* MockMovieAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0605BC2A5C3DAB00B81D38 /* MockMovieAPI.swift */; };
 		6D0605C02A5C3DBC00B81D38 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0605BF2A5C3DBC00B81D38 /* World.swift */; };
 		6D0605C22A5C3DF100B81D38 /* World+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0605C12A5C3DF100B81D38 /* World+API.swift */; };
+		6D0605C52A5C4FED00B81D38 /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0605C42A5C4FED00B81D38 /* MovieListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		6D0605BC2A5C3DAB00B81D38 /* MockMovieAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMovieAPI.swift; sourceTree = "<group>"; };
 		6D0605BF2A5C3DBC00B81D38 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
 		6D0605C12A5C3DF100B81D38 /* World+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "World+API.swift"; sourceTree = "<group>"; };
+		6D0605C42A5C4FED00B81D38 /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				6D0605A62A5C2E7B00B81D38 /* Reducer */,
 				6D0605AC2A5C315700B81D38 /* Store */,
 				6D0605A92A5C2F4200B81D38 /* Middlewares */,
+				6D0605C32A5C4FD400B81D38 /* Views */,
 			);
 			path = MovieSearch;
 			sourceTree = "<group>";
@@ -182,6 +185,14 @@
 				6D0605C12A5C3DF100B81D38 /* World+API.swift */,
 			);
 			path = World;
+			sourceTree = "<group>";
+		};
+		6D0605C32A5C4FD400B81D38 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6D0605C42A5C4FED00B81D38 /* MovieListView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +306,7 @@
 			files = (
 				6D0605822A5C24E700B81D38 /* MovieSearch.docc in Sources */,
 				6D0605AB2A5C2F5900B81D38 /* APIMiddleware.swift in Sources */,
+				6D0605C52A5C4FED00B81D38 /* MovieListView.swift in Sources */,
 				6D0605A22A5C2AA300B81D38 /* AppState.swift in Sources */,
 				6D0605AE2A5C326C00B81D38 /* Store.swift in Sources */,
 				6D0605A82A5C2E8A00B81D38 /* AppReducer.swift in Sources */,
