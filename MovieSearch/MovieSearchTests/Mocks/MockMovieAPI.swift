@@ -10,7 +10,7 @@ final class MockMovieAPI: MovieAPIProtocol {
         // wait 1 seconds
         try await Task.sleep(nanoseconds: 1_000_000_000)
 
-        return movies
+        return GETMovieSearchResponse(results: movies)
     }
 
     var movies: [Movie] {

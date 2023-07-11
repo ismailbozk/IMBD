@@ -19,8 +19,8 @@ final class ApiMiddleware {
 
             Task {
                 do {
-                    let movies = try await Current.movieAPI.movieSearch(query: query)
-                    await store.dispatch(action: .receiveMovies(movies: movies, error: nil))
+                    let response = try await Current.movieAPI.movieSearch(query: query)
+                    await store.dispatch(action: .receiveMovies(movies: response.results, error: nil))
                 } catch {
                     await store.dispatch(action: .receiveMovies(movies: [], error: error))
                 }

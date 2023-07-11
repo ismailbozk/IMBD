@@ -23,6 +23,8 @@
 		6D0605C02A5C3DBC00B81D38 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0605BF2A5C3DBC00B81D38 /* World.swift */; };
 		6D0605C22A5C3DF100B81D38 /* World+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0605C12A5C3DF100B81D38 /* World+API.swift */; };
 		6D0605C52A5C4FED00B81D38 /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0605C42A5C4FED00B81D38 /* MovieListView.swift */; };
+		6D0605C92A5D9CA500B81D38 /* MovieSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0605C82A5D9CA500B81D38 /* MovieSearchBar.swift */; };
+		6D0605CB2A5D9E6600B81D38 /* MovieSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0605CA2A5D9E6600B81D38 /* MovieSearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		6D0605BF2A5C3DBC00B81D38 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
 		6D0605C12A5C3DF100B81D38 /* World+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "World+API.swift"; sourceTree = "<group>"; };
 		6D0605C42A5C4FED00B81D38 /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
+		6D0605C82A5D9CA500B81D38 /* MovieSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchBar.swift; sourceTree = "<group>"; };
+		6D0605CA2A5D9E6600B81D38 /* MovieSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,7 +194,9 @@
 		6D0605C32A5C4FD400B81D38 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6D0605CA2A5D9E6600B81D38 /* MovieSearchView.swift */,
 				6D0605C42A5C4FED00B81D38 /* MovieListView.swift */,
+				6D0605C82A5D9CA500B81D38 /* MovieSearchBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -308,10 +314,12 @@
 				6D0605AB2A5C2F5900B81D38 /* APIMiddleware.swift in Sources */,
 				6D0605C52A5C4FED00B81D38 /* MovieListView.swift in Sources */,
 				6D0605A22A5C2AA300B81D38 /* AppState.swift in Sources */,
+				6D0605CB2A5D9E6600B81D38 /* MovieSearchView.swift in Sources */,
 				6D0605AE2A5C326C00B81D38 /* Store.swift in Sources */,
 				6D0605A82A5C2E8A00B81D38 /* AppReducer.swift in Sources */,
 				6D0605C02A5C3DBC00B81D38 /* World.swift in Sources */,
 				6D0605A52A5C2D1C00B81D38 /* AppActions.swift in Sources */,
+				6D0605C92A5D9CA500B81D38 /* MovieSearchBar.swift in Sources */,
 				6D0605C22A5C3DF100B81D38 /* World+API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

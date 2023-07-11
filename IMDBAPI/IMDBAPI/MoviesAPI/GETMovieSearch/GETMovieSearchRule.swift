@@ -6,7 +6,8 @@ final class GETMovieSearchRule: APIRule {
     let query: String
 
     init(query: String) {
-        self.query = query
+        self.query = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+
     }
 
     func makeRequest() throws -> URLRequest {
@@ -14,7 +15,7 @@ final class GETMovieSearchRule: APIRule {
             throw APIError.accessTokenNotFound
         }
 
-        var url = Current.api.baseURL().appendingPathComponent("movie/popular")
+        var url = Current.api.baseURL().appendingPathComponent("search/movie")
         var components = URLComponents(url: url, resolvingAgainstBaseURL: false)!
         components.queryItems = [URLQueryItem(name: "api_key", value: apiKey)]
         components.queryItems?.append(URLQueryItem(name: "query", value: query))

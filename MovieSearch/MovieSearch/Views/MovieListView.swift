@@ -6,34 +6,33 @@
 //
 
 import SwiftUI
+import IMDBAPI
 
 struct MovieListView: View {
     @StateObject var store: Store
-
+//    var movies: [Movie]
     var body: some View {
-        HStack {
-            Text("PArent: \(store.state.loading ? "YES" : "NO")")
-            M1(state: $store.state)
-        }
-    }
-}
-
-struct MovieListView_Previews: PreviewProvider {
-
-    static var previews: some View {
-        MovieListView(store: WorldStateManager.store)
-    }
-}
-
-struct M1: View {
-    @Binding var state: AppState
-
-    var body: some View {
-        VStack {
-            Text("isloading: \(state.loading ? "YES" : "NO")")
-            Button("Toggle") {
-                state.loading.toggle()
+//        Text("s")
+        List(store.state.movies) { movie in
+            HStack {
+                Text(movie.title)
+                    .padding()
             }
         }
+//        List(movies) { movie in
+//            HStack {
+//                Text(movie.title)
+//                    .padding()
+//            }
+//        }
     }
 }
+
+//struct MovieListView_Previews: PreviewProvider {
+//    let store = Store(state: AppState(movies: [Movie(id: 1, title: "Terminator", overview: "desc", posterPath: "/img.jpg")]),
+//                      reducer: AppReducer.appReducer(state:action:),
+//                      middleware: ApiMiddleware.appMiddleware)
+//    static var previews: some View {
+//        MovieListView(store: WorldStateManager.store, movies: [Movie(id: 1, title: "Terminator", overview: "desc", posterPath: "/img.jpg")])
+//    }
+//}

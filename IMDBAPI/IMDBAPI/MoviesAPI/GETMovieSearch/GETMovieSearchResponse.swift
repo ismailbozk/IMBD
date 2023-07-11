@@ -1,6 +1,11 @@
 import Foundation
 
-public typealias GETMovieSearchResponse = [Movie]
+public struct GETMovieSearchResponse: Codable {
+    public let results: [Movie]
+    public init(results: [Movie]) {
+        self.results = results
+    }
+}
 
 public struct Movie: Codable, Identifiable, Equatable {
     public let id: Int

@@ -3,4 +3,85 @@
    uuid = "DF988C8C-51F8-44AB-8858-6EE64347F464"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "30C0BD1C-5D47-46C5-A633-029D8D1D7225"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieSearch/MovieSearch/Middlewares/APIMiddleware.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "appMiddleware(store:action:next:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "30C0BD1C-5D47-46C5-A633-029D8D1D7225 - cceec6a0ce522686"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for closure #1 @Sendable () async -&gt; () in static MovieSearch.ApiMiddleware.appMiddleware(store: MovieSearch.Store, action: MovieSearch.AppAction, next: (MovieSearch.AppAction) -&gt; ()) -&gt; ()"
+                  moduleName = "MovieSearch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailbozkurt/Documents/dev/IMBD/MovieSearch/MovieSearch/Middlewares/APIMiddleware.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "106">
+               </Location>
+               <Location
+                  uuid = "30C0BD1C-5D47-46C5-A633-029D8D1D7225 - 8800496bc988388b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for closure #1 @Sendable () async -&gt; () in static MovieSearch.ApiMiddleware.appMiddleware(store: MovieSearch.Store, action: MovieSearch.AppAction, next: (MovieSearch.AppAction) -&gt; ()) -&gt; ()"
+                  moduleName = "MovieSearch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailbozkurt/Documents/dev/IMBD/MovieSearch/MovieSearch/Middlewares/APIMiddleware.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "17">
+               </Location>
+               <Location
+                  uuid = "30C0BD1C-5D47-46C5-A633-029D8D1D7225 - 4bb3d31ec0ce128c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(8) suspend resume partial function for closure #1 @Sendable () async -&gt; () in static MovieSearch.ApiMiddleware.appMiddleware(store: MovieSearch.Store, action: MovieSearch.AppAction, next: (MovieSearch.AppAction) -&gt; ()) -&gt; ()"
+                  moduleName = "MovieSearch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ismailbozkurt/Documents/dev/IMBD/MovieSearch/MovieSearch/Middlewares/APIMiddleware.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "50">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "27DF7FA2-192A-48FD-A60E-FFE3CD297035"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IMDBAPI/IMDBAPI/Common/APIClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "perform(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
