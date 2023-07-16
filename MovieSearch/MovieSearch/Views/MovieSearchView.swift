@@ -11,9 +11,17 @@ public struct MovieSearchView: View {
     @StateObject var store: Store = WorldStateManager.store
 
     public var body: some View {
-        VStack {
-            MovieSearchBar(store: store)
-            MovieListView(store: store)
+        ZStack {
+            VStack {
+                MovieSearchBar(store: store)
+                MovieListView(store: store)
+            }
+            if store.state.loading {
+                EmptyView()
+                    .foregroundColor(.white.opacity(0.2))
+                    .blur(radius: 20)
+                ActivityIndicator(isAnimating: $store.state.loading, style: .large)
+            }
         }
     }
 
