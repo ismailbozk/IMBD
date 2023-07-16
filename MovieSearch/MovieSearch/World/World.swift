@@ -1,6 +1,7 @@
 import Foundation
 import IMDBFoundation
 import SwiftUI
+import IMDBUI
 
 /// Dependency injection for the API framework.
 ///
@@ -14,12 +15,16 @@ class WorldStateManager {
     @ObservedObject static var store =
     Store(state: AppState(),
           reducer: AppReducer.appReducer(state:action:),
-          middleware: ApiMiddleware.appMiddleware)
+          middlewares: [ApiMiddleware.appMiddleware, NavigationMiddleware.appMiddleware])
+}
+
+public struct Gateway {
+    public static var coordinatorContext: () -> NavigationContext = { IMDBNavigationController() }
 }
 
 
-//#if DEBUG
-//    var Current = World()
-//#else
+#if DEBUG
+    var Current = World()
+#else
     let Current = World()
-//#endif
+#endif

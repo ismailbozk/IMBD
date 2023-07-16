@@ -6,18 +6,20 @@
 //
 
 import Foundation
+import IMDBUI
 
 class Store: ObservableObject {
     @Published var state: AppState
     let reducer: (inout AppState, AppAction) -> AppState
-    let middleware: ((Store, AppAction, @escaping (AppAction) -> Void) -> Void)?
+    let middlewares: [((Store, AppAction, @escaping (AppAction) -> Void) -> Void)]
 
     init(state: AppState,
          reducer: @escaping (inout AppState, AppAction) -> AppState,
-         middleware: ((Store, AppAction, @escaping (AppAction) -> Void) -> Void)? = nil) {
+         middlewares: [((Store, AppAction, @escaping (AppAction) -> Void) -> Void)] = []
+    ) {
         self.state = state
         self.reducer = reducer
-        self.middleware = middleware
+        self.middlewares = middlewares
     }
 
     @MainActor
@@ -26,12 +28,14 @@ class Store: ObservableObject {
 
         self.state = reducer(&self.state, action)
 
-        middleware?(self, action) { [weak self] newAction in
-            // Update the state by calling the reducer with the current state and the new action
-            guard let self else {
-                return
+        for middleware in middlewares {
+            middleware(self, action) { [weak self] newAction in
+                // Update the state by calling the reducer with the current state and the new action
+                guard let self else {
+                    return
+                }
+                self.state = self.reducer(&self.state, newAction)
             }
-            self.state = self.reducer(&self.state, newAction)
         }
     }
 }

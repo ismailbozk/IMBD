@@ -22,6 +22,10 @@
 		6D0605722A5C21C600B81D38 /* IMDBAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0605702A5C21C600B81D38 /* IMDBAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6D0605CD2A5DA58B00B81D38 /* MovieSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0605CC2A5DA58B00B81D38 /* MovieSearch.framework */; };
 		6D0605CE2A5DA58B00B81D38 /* MovieSearch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0605CC2A5DA58B00B81D38 /* MovieSearch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6D9D272A2A644FBE0056C35F /* IMDBUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D9D27292A644FBE0056C35F /* IMDBUI.framework */; };
+		6D9D272B2A644FBE0056C35F /* IMDBUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6D9D27292A644FBE0056C35F /* IMDBUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6D9D272D2A644FE30056C35F /* IMDBAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9D272C2A644FE30056C35F /* IMDBAppDelegate.swift */; };
+		6D9D27362A64635A0056C35F /* IMDBSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9D27352A64635A0056C35F /* IMDBSceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,7 @@
 			files = (
 				6D06056F2A5C21BF00B81D38 /* IMDBFoundation.framework in Embed Frameworks */,
 				6D0605CE2A5DA58B00B81D38 /* MovieSearch.framework in Embed Frameworks */,
+				6D9D272B2A644FBE0056C35F /* IMDBUI.framework in Embed Frameworks */,
 				6D0605722A5C21C600B81D38 /* IMDBAPI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -78,6 +83,9 @@
 		6D06056D2A5C21BF00B81D38 /* IMDBFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IMDBFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D0605702A5C21C600B81D38 /* IMDBAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IMDBAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D0605CC2A5DA58B00B81D38 /* MovieSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MovieSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D9D27292A644FBE0056C35F /* IMDBUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IMDBUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D9D272C2A644FE30056C35F /* IMDBAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMDBAppDelegate.swift; sourceTree = "<group>"; };
+		6D9D27352A64635A0056C35F /* IMDBSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMDBSceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +95,7 @@
 			files = (
 				6D06056E2A5C21BF00B81D38 /* IMDBFoundation.framework in Frameworks */,
 				6D0605CD2A5DA58B00B81D38 /* MovieSearch.framework in Frameworks */,
+				6D9D272A2A644FBE0056C35F /* IMDBUI.framework in Frameworks */,
 				6D0605712A5C21C600B81D38 /* IMDBAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,6 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				6D0604652A5B069500B81D38 /* Info.plist */,
+				6D9D272C2A644FE30056C35F /* IMDBAppDelegate.swift */,
+				6D9D27352A64635A0056C35F /* IMDBSceneDelegate.swift */,
 				6D0604282A5B056000B81D38 /* IMDBBaseApp.swift */,
 				6D06042A2A5B056000B81D38 /* ContentView.swift */,
 				6D06042C2A5B056300B81D38 /* Assets.xcassets */,
@@ -170,6 +181,7 @@
 		6D06045E2A5B05BB00B81D38 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6D9D27292A644FBE0056C35F /* IMDBUI.framework */,
 				6D0605CC2A5DA58B00B81D38 /* MovieSearch.framework */,
 				6D0605702A5C21C600B81D38 /* IMDBAPI.framework */,
 				6D06056D2A5C21BF00B81D38 /* IMDBFoundation.framework */,
@@ -322,7 +334,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D06042B2A5B056000B81D38 /* ContentView.swift in Sources */,
+				6D9D27362A64635A0056C35F /* IMDBSceneDelegate.swift in Sources */,
 				6D06056A2A5C20B000B81D38 /* World.swift in Sources */,
+				6D9D272D2A644FE30056C35F /* IMDBAppDelegate.swift in Sources */,
 				6D06056C2A5C20D800B81D38 /* World+App.swift in Sources */,
 				6D0604292A5B056000B81D38 /* IMDBBaseApp.swift in Sources */,
 			);
@@ -486,7 +500,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = IMDBBase/Info.plist;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -515,7 +528,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = IMDBBase/Info.plist;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

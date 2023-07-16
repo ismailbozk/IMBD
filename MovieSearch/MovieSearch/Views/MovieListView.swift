@@ -10,29 +10,28 @@ import IMDBAPI
 
 struct MovieListView: View {
     @StateObject var store: Store
-//    var movies: [Movie]
+
     var body: some View {
-//        Text("s")
         List(store.state.movies) { movie in
             HStack {
                 Text(movie.title)
                     .padding()
+                Spacer()
+            }
+            .contentShape(Rectangle())
+            .onTapGesture {
+                store.dispatch(action: .selectMovie(movie: movie))
             }
         }
-//        List(movies) { movie in
-//            HStack {
-//                Text(movie.title)
-//                    .padding()
-//            }
-//        }
     }
 }
 
-//struct MovieListView_Previews: PreviewProvider {
-//    let store = Store(state: AppState(movies: [Movie(id: 1, title: "Terminator", overview: "desc", posterPath: "/img.jpg")]),
-//                      reducer: AppReducer.appReducer(state:action:),
-//                      middleware: ApiMiddleware.appMiddleware)
-//    static var previews: some View {
-//        MovieListView(store: WorldStateManager.store, movies: [Movie(id: 1, title: "Terminator", overview: "desc", posterPath: "/img.jpg")])
-//    }
-//}
+struct MovieListView_Previews: PreviewProvider {
+    static var movies = [Movie(id: 1, title: "Terminator", overview: "desc", posterPath: "/img.jpg")]
+    static var store = Store(state: AppState(movies: movies),
+                      reducer: AppReducer.appReducer(state:action:),
+                           middlewares: [ApiMiddleware.appMiddleware, NavigationMiddleware.appMiddleware])
+    static var previews: some View {
+        MovieListView(store: WorldStateManager.store)
+    }
+}

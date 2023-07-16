@@ -25,6 +25,8 @@ final class AppReducer {
             state.query = query
             state.error = nil
             return state
+        case .selectMovie(movie: _):
+            return state
         }
     }
 }

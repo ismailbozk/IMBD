@@ -12,6 +12,7 @@ enum AppAction {
     case requestMovies(query: String)
     case receiveMovies(movies: [Movie], error: Error?)
     case updateQuery(query: String)
+    case selectMovie(movie: Movie)
 }
 
 extension AppAction: Equatable {
@@ -24,6 +25,8 @@ extension AppAction: Equatable {
             ((le == nil) == (re == nil))
         case (.updateQuery(let lq), .updateQuery(let rq)):
             return lq == rq
+        case (.selectMovie(let lm), .selectMovie(let rm)):
+            return lm == rm
         case (_, _):
             return false
         }
