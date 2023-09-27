@@ -8,7 +8,7 @@
 import SwiftUI
 
 public struct MovieSearchView: View {
-    @StateObject var store: Store = WorldStateManager.store
+    @ObservedObject var store: Store = WorldStateManager.store
 
     public var body: some View {
         ZStack {

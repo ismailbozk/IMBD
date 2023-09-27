@@ -29,8 +29,7 @@ final class MovieSearchCoordinator: Coordinator {
     func navigate(_ route: MovieSearchRoute) {
         switch route {
         case .selectMovie(let context):
-            // TODO: add the new controller here
-            let detailScreen = EmptyView()
+            let detailScreen = MovieDetailView(movie: context.movie)
             navigationContext.push(view: detailScreen, animated: true)
         }
     }
