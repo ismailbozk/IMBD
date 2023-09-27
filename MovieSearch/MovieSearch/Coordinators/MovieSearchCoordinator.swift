@@ -16,6 +16,7 @@ struct MovieDetailContext {
 
 enum MovieSearchRoute: IMDBUI.Route {
     case selectMovie(context: MovieDetailContext)
+    case dismissMovieDetails
 }
 
 final class MovieSearchCoordinator: Coordinator {
@@ -31,6 +32,8 @@ final class MovieSearchCoordinator: Coordinator {
         case .selectMovie(let context):
             let detailScreen = MovieDetailView(movie: context.movie)
             navigationContext.push(view: detailScreen, animated: true)
+        case .dismissMovieDetails:
+            navigationContext.pop(animated: true)
         }
     }
 }

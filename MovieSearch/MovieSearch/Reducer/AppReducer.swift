@@ -27,6 +27,8 @@ final class AppReducer {
             return state
         case .selectMovie(movie: _):
             return state
+        case .navigateBackToSearch:
+            return state
         }
     }
 }
