@@ -13,4 +13,7 @@
    <FileRef
       location = "group:IMDBAPI/IMDBAPI.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:IMDBUI/IMDBUI.xcodeproj">
+   </FileRef>
 </Workspace>
